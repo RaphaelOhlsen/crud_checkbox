@@ -9,7 +9,7 @@ class Client extends Model
     protected $fillable = [
         'name'
     ];
-
+//
     public function languages(){
         return $this->belongsToMany(Language::class);
     }
