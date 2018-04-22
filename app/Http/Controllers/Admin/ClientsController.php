@@ -48,7 +48,6 @@ class ClientsController extends Controller
      */
     public function store(Request $request, Client $client)
     {
-//        $data = $request->all();
         $last_client = Client::create($request->all());
         Client::find($last_client->id)->languages()->attach($request->checked_language);
         return redirect()->to(route('clients.index'));

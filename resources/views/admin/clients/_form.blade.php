@@ -14,23 +14,11 @@
     <label>Linguas</label>
     <div class="checkbox">
         @foreach($languages as $language)
-
-            {{--<label>
-            <input id="languages" name="checked_language[]" value="{{$language->id}}" type="checkbox"
-            @if(in_array($language->id, $selected_languages ) == 1)
-                {{'checked="checked"'}}
-            @else
-                {{''}}
-            @endif > {{$language->name}}
-            </label>
-            <br>--}}
-
              <label>
                 <input id="languages" name="checked_language[]" value="{{$language->id}}" type="checkbox"
                         {{in_array($language->id, $selected_languages ) == 1 ? 'checked="checked"' : ''}}>{{$language->name}}
             </label>
             <br>
-
         @endforeach
     </div>
 </div>
